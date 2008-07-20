@@ -1,0 +1,19 @@
+login: &login
+  adapter: mysql
+  username: root
+  password: 
+  encoding: utf8    
+  port: 3306
+  host: localhost
+
+development:
+  database: mon_irc_development
+  <<: *login
+
+production:
+  database: mon_irc_development
+  <<: *login
+
+test:
+  database: mon_irc_test
+  <<: *login

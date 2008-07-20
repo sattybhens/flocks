@@ -1,0 +1,5 @@
+.entry
+  .entry-message= message.message
+  .entry-nickname=message.nickname
+  .date= message.created_at 
+  .entry-action= link_to('Delete', message_url(message), :method => :delete, :confirm => "Are you sure you want to delete #{message.nickname}'s message")
